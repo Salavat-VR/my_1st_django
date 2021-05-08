@@ -14,6 +14,7 @@ urlpatterns = [
     path('post', views.PostListView.as_view(), name='post_lists'),
     path('post/create', views.post_create, name='post_create'),
     path('post/show/<int:post_id>', views.post_show, name='post_show'),
+    path('post/xlsx', views.PostXlsx.as_view(), name='load_posts_via_xlsx'),
 
     path('post/update/<int:post_id>', views.post_update, name='post_update'),
     path('api/posts', views.post_api, name='api_posts'),
